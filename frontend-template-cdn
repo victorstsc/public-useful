@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend - Template</title>
 
-
+    <!-- JAVASCRIPT CDNs -->
+    <!-- REACT 18.2.0 -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- END OF JAVASCRIPT CDNs -->
 
     <!-- CSS CDNs -->
     <!-- BOOTSTRAP 5.0.2 -->
