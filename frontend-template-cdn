@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend - Template</title>
+
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- CSS CDNs -->
+    <!-- BOOTSTRAP 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- END OF CSS CDNs -->
+
+</head>
+<body>
+    
+
+    <div class="demo" id="root"></div>
+
+    <div class="demo" id="square"></div>
+
+    <div class="demo" id="demo-bootstrap">
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+
+    <!-- JAVASCRIPT CDNs -->
+    <!-- BOOTSTRAP 5.0.2 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- JQUERY 3.6.4 -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- END OF JAVASCRIPT CDNs -->
+
+
+
+    <script class="demo "id="demo-react">
+
+        /* A função 'render' da Classe Root recebe um Elemento React como parâmetro e renderiza o mesmo */
+        /* A função 'createElement' recebe 3 parâmetros: type, props, children... 
+        
+        'type' pode ser definido como a tag do elemento, como por exemplo: 'div' ou pode ser o nome de uma Classe de Elemento, extendida da Classe React.Compoment
+
+        'props' são as propriedades do elemento, inseridas no formato de dicionário
+
+        'children' podem ser inseridos vários, sendo por texto, por exemplo: '<p>Hello World</p> ou sendo React.createElement()'
+        
+        */
+
+
+        const e = React.createElement;
+
+        class Hello extends React.Component {
+            render() {
+                return e('div', null, `Hello ${this.props.toWhat}`, e(ChildTest, null, null));
+            }
+        }
+
+        class ChildTest extends React.Component {
+            render() {
+                return e('h1', {className: 'red'}, `ChildTest`);
+            }
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(e(Hello, {
+            toWhat: 'World'
+        }, null));
+
+
+
+
+
+    </script>
+
+    <script class="demo "id="demo-jquery">
+
+        $("#square").css("background-color", "red");
+
+        $("#square").css("height", "300px");
+        $("#square").css("width", "300px");
+
+    </script>
+
+</body>
+</html>
